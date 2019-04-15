@@ -1,0 +1,12 @@
+cd ~
+sudo raspi-config
+sudo apt-get update
+sudo apt-get upgrade
+git clone -b spi https://github.com/ttn-zh/ic880a-gateway.git
+cd ic880a-gateway
+sudo nano start.sh
+sudo ./install.sh
+sudo ./start.sh
+cd /etc/init.d
+sudo nano ttnstart.sh
+sudo chmod 755 ttnstart.sh
